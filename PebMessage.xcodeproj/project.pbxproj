@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77631A270C06C501005415CB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77631A260C06C501005415CB /* Python.framework */; };
+		77631A3F0C0748CF005415CB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 77631A3E0C0748CF005415CB /* main.py */; };
+		7790198F0C07548A00326F66 /* Cocoa_PythonAppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 7790198E0C07548A00326F66 /* Cocoa_PythonAppDelegate.py */; };
+		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
+		804AB63318B98F63002EDCC8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 804AB63218B98F63002EDCC8 /* Icon.png */; };
+		80A7C3C618CD3C4A00E5B1D8 /* LibPebblesCommand.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3B618CD3C4A00E5B1D8 /* LibPebblesCommand.pyc */; };
+		80A7C3C718CD3C4A00E5B1D8 /* LightBluePebble.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3B718CD3C4A00E5B1D8 /* LightBluePebble.py */; };
+		80A7C3C818CD3C4A00E5B1D8 /* LightBluePebble.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3B818CD3C4A00E5B1D8 /* LightBluePebble.pyc */; };
+		80A7C3C918CD3C4A00E5B1D8 /* PblAnalytics.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3B918CD3C4A00E5B1D8 /* PblAnalytics.pyc */; };
+		80A7C3CA18CD3C4A00E5B1D8 /* PblBuildCommand.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BA18CD3C4A00E5B1D8 /* PblBuildCommand.pyc */; };
+		80A7C3CB18CD3C4A00E5B1D8 /* PblCommand.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BB18CD3C4A00E5B1D8 /* PblCommand.pyc */; };
+		80A7C3CC18CD3C4A00E5B1D8 /* PblProjectConverter.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BC18CD3C4A00E5B1D8 /* PblProjectConverter.pyc */; };
+		80A7C3CD18CD3C4A00E5B1D8 /* PblProjectCreator.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BD18CD3C4A00E5B1D8 /* PblProjectCreator.pyc */; };
+		80A7C3CE18CD3C4A00E5B1D8 /* pebble.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BE18CD3C4A00E5B1D8 /* pebble.py */; };
+		80A7C3CF18CD3C4A00E5B1D8 /* pebble.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3BF18CD3C4A00E5B1D8 /* pebble.pyc */; };
+		80A7C3D018CD3C4A00E5B1D8 /* stm32_crc.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3C018CD3C4A00E5B1D8 /* stm32_crc.py */; };
+		80A7C3D118CD3C4A00E5B1D8 /* stm32_crc.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3C118CD3C4A00E5B1D8 /* stm32_crc.pyc */; };
+		80A7C3D218CD3C4A00E5B1D8 /* VersionGenerated.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3C218CD3C4A00E5B1D8 /* VersionGenerated.pyc */; };
+		80A7C3D318CD3C4A00E5B1D8 /* WebSocketPebble.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3C318CD3C4A00E5B1D8 /* WebSocketPebble.pyc */; };
+		80A7C3EC18CD3C7D00E5B1D8 /* serial.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3D518CD3C7D00E5B1D8 /* serial.py */; };
+		80A7C3ED18CD3C7D00E5B1D8 /* rfc2217.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3D618CD3C7D00E5B1D8 /* rfc2217.py */; };
+		80A7C3EE18CD3C7D00E5B1D8 /* serialcli.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3D718CD3C7D00E5B1D8 /* serialcli.py */; };
+		80A7C3EF18CD3C7D00E5B1D8 /* serialjava.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3D818CD3C7D00E5B1D8 /* serialjava.py */; };
+		80A7C3F018CD3C7D00E5B1D8 /* serialposix.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3D918CD3C7D00E5B1D8 /* serialposix.py */; };
+		80A7C3F118CD3C7D00E5B1D8 /* serialutil.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3DA18CD3C7D00E5B1D8 /* serialutil.py */; };
+		80A7C3F218CD3C7D00E5B1D8 /* serialwin32.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3DB18CD3C7D00E5B1D8 /* serialwin32.py */; };
+		80A7C3F318CD3C7D00E5B1D8 /* sermsdos.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3DC18CD3C7D00E5B1D8 /* sermsdos.py */; };
+		80A7C3F418CD3C7D00E5B1D8 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3DE18CD3C7D00E5B1D8 /* __init__.py */; };
+		80A7C3F518CD3C7D00E5B1D8 /* list_ports.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3DF18CD3C7D00E5B1D8 /* list_ports.py */; };
+		80A7C3F618CD3C7D00E5B1D8 /* list_ports_linux.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E018CD3C7D00E5B1D8 /* list_ports_linux.py */; };
+		80A7C3F718CD3C7D00E5B1D8 /* list_ports_osx.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E118CD3C7D00E5B1D8 /* list_ports_osx.py */; };
+		80A7C3F818CD3C7D00E5B1D8 /* list_ports_posix.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E218CD3C7D00E5B1D8 /* list_ports_posix.py */; };
+		80A7C3F918CD3C7D00E5B1D8 /* list_ports_windows.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E318CD3C7D00E5B1D8 /* list_ports_windows.py */; };
+		80A7C3FA18CD3C7D00E5B1D8 /* miniterm.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E418CD3C7D00E5B1D8 /* miniterm.py */; };
+		80A7C3FB18CD3C7D00E5B1D8 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E618CD3C7D00E5B1D8 /* __init__.py */; };
+		80A7C3FC18CD3C7D00E5B1D8 /* protocol_hwgrep.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E718CD3C7D00E5B1D8 /* protocol_hwgrep.py */; };
+		80A7C3FD18CD3C7D00E5B1D8 /* protocol_loop.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E818CD3C7D00E5B1D8 /* protocol_loop.py */; };
+		80A7C3FE18CD3C7D00E5B1D8 /* protocol_rfc2217.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3E918CD3C7D00E5B1D8 /* protocol_rfc2217.py */; };
+		80A7C3FF18CD3C7D00E5B1D8 /* protocol_socket.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3EA18CD3C7D00E5B1D8 /* protocol_socket.py */; };
+		80A7C40018CD3C7D00E5B1D8 /* win32.py in Resources */ = {isa = PBXBuildFile; fileRef = 80A7C3EB18CD3C7D00E5B1D8 /* win32.py */; };
+		80CDEB2B172C7A4F00E9A5EB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80CDEB2A172C7A4F00E9A5EB /* Icon.png */; };
+		80CDEB2D172C7A6E00E9A5EB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80CDEB2C172C7A6E00E9A5EB /* Icon.icns */; };
+		80FC414015483EDC008E9F67 /* tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FC413F15483EDC008E9F67 /* tray.png */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* Cocoa_Python_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cocoa_Python_Prefix.pch; sourceTree = "<group>"; };
+		77631A260C06C501005415CB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /System/Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		77631A3E0C0748CF005415CB /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		7790198E0C07548A00326F66 /* Cocoa_PythonAppDelegate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Cocoa_PythonAppDelegate.py; sourceTree = "<group>"; };
+		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		804AB63218B98F63002EDCC8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		80A7C3B618CD3C4A00E5B1D8 /* LibPebblesCommand.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LibPebblesCommand.pyc; sourceTree = "<group>"; };
+		80A7C3B718CD3C4A00E5B1D8 /* LightBluePebble.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LightBluePebble.py; sourceTree = "<group>"; };
+		80A7C3B818CD3C4A00E5B1D8 /* LightBluePebble.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LightBluePebble.pyc; sourceTree = "<group>"; };
+		80A7C3B918CD3C4A00E5B1D8 /* PblAnalytics.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PblAnalytics.pyc; sourceTree = "<group>"; };
+		80A7C3BA18CD3C4A00E5B1D8 /* PblBuildCommand.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PblBuildCommand.pyc; sourceTree = "<group>"; };
+		80A7C3BB18CD3C4A00E5B1D8 /* PblCommand.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PblCommand.pyc; sourceTree = "<group>"; };
+		80A7C3BC18CD3C4A00E5B1D8 /* PblProjectConverter.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PblProjectConverter.pyc; sourceTree = "<group>"; };
+		80A7C3BD18CD3C4A00E5B1D8 /* PblProjectCreator.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = PblProjectCreator.pyc; sourceTree = "<group>"; };
+		80A7C3BE18CD3C4A00E5B1D8 /* pebble.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pebble.py; sourceTree = "<group>"; };
+		80A7C3BF18CD3C4A00E5B1D8 /* pebble.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = pebble.pyc; sourceTree = "<group>"; };
+		80A7C3C018CD3C4A00E5B1D8 /* stm32_crc.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stm32_crc.py; sourceTree = "<group>"; };
+		80A7C3C118CD3C4A00E5B1D8 /* stm32_crc.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = stm32_crc.pyc; sourceTree = "<group>"; };
+		80A7C3C218CD3C4A00E5B1D8 /* VersionGenerated.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = VersionGenerated.pyc; sourceTree = "<group>"; };
+		80A7C3C318CD3C4A00E5B1D8 /* WebSocketPebble.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = WebSocketPebble.pyc; sourceTree = "<group>"; };
+		80A7C3D518CD3C7D00E5B1D8 /* serial.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serial.py; sourceTree = "<group>"; };
+		80A7C3D618CD3C7D00E5B1D8 /* rfc2217.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = rfc2217.py; sourceTree = "<group>"; };
+		80A7C3D718CD3C7D00E5B1D8 /* serialcli.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serialcli.py; sourceTree = "<group>"; };
+		80A7C3D818CD3C7D00E5B1D8 /* serialjava.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serialjava.py; sourceTree = "<group>"; };
+		80A7C3D918CD3C7D00E5B1D8 /* serialposix.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serialposix.py; sourceTree = "<group>"; };
+		80A7C3DA18CD3C7D00E5B1D8 /* serialutil.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serialutil.py; sourceTree = "<group>"; };
+		80A7C3DB18CD3C7D00E5B1D8 /* serialwin32.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = serialwin32.py; sourceTree = "<group>"; };
+		80A7C3DC18CD3C7D00E5B1D8 /* sermsdos.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = sermsdos.py; sourceTree = "<group>"; };
+		80A7C3DE18CD3C7D00E5B1D8 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		80A7C3DF18CD3C7D00E5B1D8 /* list_ports.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = list_ports.py; sourceTree = "<group>"; };
+		80A7C3E018CD3C7D00E5B1D8 /* list_ports_linux.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = list_ports_linux.py; sourceTree = "<group>"; };
+		80A7C3E118CD3C7D00E5B1D8 /* list_ports_osx.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = list_ports_osx.py; sourceTree = "<group>"; };
+		80A7C3E218CD3C7D00E5B1D8 /* list_ports_posix.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = list_ports_posix.py; sourceTree = "<group>"; };
+		80A7C3E318CD3C7D00E5B1D8 /* list_ports_windows.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = list_ports_windows.py; sourceTree = "<group>"; };
+		80A7C3E418CD3C7D00E5B1D8 /* miniterm.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = miniterm.py; sourceTree = "<group>"; };
+		80A7C3E618CD3C7D00E5B1D8 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		80A7C3E718CD3C7D00E5B1D8 /* protocol_hwgrep.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = protocol_hwgrep.py; sourceTree = "<group>"; };
+		80A7C3E818CD3C7D00E5B1D8 /* protocol_loop.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = protocol_loop.py; sourceTree = "<group>"; };
+		80A7C3E918CD3C7D00E5B1D8 /* protocol_rfc2217.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = protocol_rfc2217.py; sourceTree = "<group>"; };
+		80A7C3EA18CD3C7D00E5B1D8 /* protocol_socket.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = protocol_socket.py; sourceTree = "<group>"; };
+		80A7C3EB18CD3C7D00E5B1D8 /* win32.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = win32.py; sourceTree = "<group>"; };
+		80CDEB2A172C7A4F00E9A5EB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		80CDEB2C172C7A6E00E9A5EB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		80F9F64D1536E04A000182F4 /* Cocoa-Python.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Cocoa-Python.entitlements"; sourceTree = "<group>"; };
+		80FC413F15483EDC008E9F67 /* tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tray.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* PebMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				77631A270C06C501005415CB /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80A7C3B318CD3C4A00E5B1D8 /* pebble */,
+				7790198E0C07548A00326F66 /* Cocoa_PythonAppDelegate.py */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77631A260C06C501005415CB /* Python.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* PebMessage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Cocoa-Python */ = {
+			isa = PBXGroup;
+			children = (
+				80CDEB2C172C7A6E00E9A5EB /* Icon.icns */,
+				80CDEB2A172C7A4F00E9A5EB /* Icon.png */,
+				80F9F64D1536E04A000182F4 /* Cocoa-Python.entitlements */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Cocoa-Python";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Cocoa_Python_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				77631A3E0C0748CF005415CB /* main.py */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				804AB63218B98F63002EDCC8 /* Icon.png */,
+				80FC413F15483EDC008E9F67 /* tray.png */,
+				77C8C1F70C07829500965286 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80A7C3B318CD3C4A00E5B1D8 /* pebble */ = {
+			isa = PBXGroup;
+			children = (
+				80A7C3D418CD3C7D00E5B1D8 /* serial */,
+				80A7C3B618CD3C4A00E5B1D8 /* LibPebblesCommand.pyc */,
+				80A7C3B718CD3C4A00E5B1D8 /* LightBluePebble.py */,
+				80A7C3B818CD3C4A00E5B1D8 /* LightBluePebble.pyc */,
+				80A7C3B918CD3C4A00E5B1D8 /* PblAnalytics.pyc */,
+				80A7C3BA18CD3C4A00E5B1D8 /* PblBuildCommand.pyc */,
+				80A7C3BB18CD3C4A00E5B1D8 /* PblCommand.pyc */,
+				80A7C3BC18CD3C4A00E5B1D8 /* PblProjectConverter.pyc */,
+				80A7C3BD18CD3C4A00E5B1D8 /* PblProjectCreator.pyc */,
+				80A7C3BE18CD3C4A00E5B1D8 /* pebble.py */,
+				80A7C3BF18CD3C4A00E5B1D8 /* pebble.pyc */,
+				80A7C3C018CD3C4A00E5B1D8 /* stm32_crc.py */,
+				80A7C3C118CD3C4A00E5B1D8 /* stm32_crc.pyc */,
+				80A7C3C218CD3C4A00E5B1D8 /* VersionGenerated.pyc */,
+				80A7C3C318CD3C4A00E5B1D8 /* WebSocketPebble.pyc */,
+			);
+			path = pebble;
+			sourceTree = "<group>";
+		};
+		80A7C3D418CD3C7D00E5B1D8 /* serial */ = {
+			isa = PBXGroup;
+			children = (
+				80A7C3D518CD3C7D00E5B1D8 /* serial.py */,
+				80A7C3D618CD3C7D00E5B1D8 /* rfc2217.py */,
+				80A7C3D718CD3C7D00E5B1D8 /* serialcli.py */,
+				80A7C3D818CD3C7D00E5B1D8 /* serialjava.py */,
+				80A7C3D918CD3C7D00E5B1D8 /* serialposix.py */,
+				80A7C3DA18CD3C7D00E5B1D8 /* serialutil.py */,
+				80A7C3DB18CD3C7D00E5B1D8 /* serialwin32.py */,
+				80A7C3DC18CD3C7D00E5B1D8 /* sermsdos.py */,
+				80A7C3DD18CD3C7D00E5B1D8 /* tools */,
+				80A7C3E518CD3C7D00E5B1D8 /* urlhandler */,
+				80A7C3EB18CD3C7D00E5B1D8 /* win32.py */,
+			);
+			path = serial;
+			sourceTree = "<group>";
+		};
+		80A7C3DD18CD3C7D00E5B1D8 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				80A7C3DE18CD3C7D00E5B1D8 /* __init__.py */,
+				80A7C3DF18CD3C7D00E5B1D8 /* list_ports.py */,
+				80A7C3E018CD3C7D00E5B1D8 /* list_ports_linux.py */,
+				80A7C3E118CD3C7D00E5B1D8 /* list_ports_osx.py */,
+				80A7C3E218CD3C7D00E5B1D8 /* list_ports_posix.py */,
+				80A7C3E318CD3C7D00E5B1D8 /* list_ports_windows.py */,
+				80A7C3E418CD3C7D00E5B1D8 /* miniterm.py */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		80A7C3E518CD3C7D00E5B1D8 /* urlhandler */ = {
+			isa = PBXGroup;
+			children = (
+				80A7C3E618CD3C7D00E5B1D8 /* __init__.py */,
+				80A7C3E718CD3C7D00E5B1D8 /* protocol_hwgrep.py */,
+				80A7C3E818CD3C7D00E5B1D8 /* protocol_loop.py */,
+				80A7C3E918CD3C7D00E5B1D8 /* protocol_rfc2217.py */,
+				80A7C3EA18CD3C7D00E5B1D8 /* protocol_socket.py */,
+			);
+			path = urlhandler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* PebMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PebMessage" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PebMessage;
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Cocoa-Python";
+			productReference = 8D1107320486CEB800E47090 /* PebMessage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PebMessage" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Cocoa-Python */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* PebMessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				77631A3F0C0748CF005415CB /* main.py in Resources */,
+				7790198F0C07548A00326F66 /* Cocoa_PythonAppDelegate.py in Resources */,
+				80A7C3F718CD3C7D00E5B1D8 /* list_ports_osx.py in Resources */,
+				80A7C3CF18CD3C4A00E5B1D8 /* pebble.pyc in Resources */,
+				80A7C3CA18CD3C4A00E5B1D8 /* PblBuildCommand.pyc in Resources */,
+				80A7C3FF18CD3C7D00E5B1D8 /* protocol_socket.py in Resources */,
+				80A7C3F018CD3C7D00E5B1D8 /* serialposix.py in Resources */,
+				77C8C1F90C07829500965286 /* MainMenu.xib in Resources */,
+				80A7C3FC18CD3C7D00E5B1D8 /* protocol_hwgrep.py in Resources */,
+				80A7C3FA18CD3C7D00E5B1D8 /* miniterm.py in Resources */,
+				80A7C3CE18CD3C4A00E5B1D8 /* pebble.py in Resources */,
+				80A7C3D218CD3C4A00E5B1D8 /* VersionGenerated.pyc in Resources */,
+				80A7C3F118CD3C7D00E5B1D8 /* serialutil.py in Resources */,
+				80A7C3EF18CD3C7D00E5B1D8 /* serialjava.py in Resources */,
+				80A7C3C718CD3C4A00E5B1D8 /* LightBluePebble.py in Resources */,
+				804AB63318B98F63002EDCC8 /* Icon.png in Resources */,
+				80A7C3C618CD3C4A00E5B1D8 /* LibPebblesCommand.pyc in Resources */,
+				80A7C3FB18CD3C7D00E5B1D8 /* __init__.py in Resources */,
+				80A7C3EC18CD3C7D00E5B1D8 /* serial.py in Resources */,
+				80A7C3F518CD3C7D00E5B1D8 /* list_ports.py in Resources */,
+				80A7C3FD18CD3C7D00E5B1D8 /* protocol_loop.py in Resources */,
+				80A7C3ED18CD3C7D00E5B1D8 /* rfc2217.py in Resources */,
+				80A7C3F318CD3C7D00E5B1D8 /* sermsdos.py in Resources */,
+				80A7C40018CD3C7D00E5B1D8 /* win32.py in Resources */,
+				80A7C3CD18CD3C4A00E5B1D8 /* PblProjectCreator.pyc in Resources */,
+				80A7C3C818CD3C4A00E5B1D8 /* LightBluePebble.pyc in Resources */,
+				80A7C3F618CD3C7D00E5B1D8 /* list_ports_linux.py in Resources */,
+				80A7C3D318CD3C4A00E5B1D8 /* WebSocketPebble.pyc in Resources */,
+				80A7C3F818CD3C7D00E5B1D8 /* list_ports_posix.py in Resources */,
+				80A7C3CC18CD3C4A00E5B1D8 /* PblProjectConverter.pyc in Resources */,
+				80FC414015483EDC008E9F67 /* tray.png in Resources */,
+				80A7C3F218CD3C7D00E5B1D8 /* serialwin32.py in Resources */,
+				80CDEB2B172C7A4F00E9A5EB /* Icon.png in Resources */,
+				80A7C3C918CD3C4A00E5B1D8 /* PblAnalytics.pyc in Resources */,
+				80CDEB2D172C7A6E00E9A5EB /* Icon.icns in Resources */,
+				80A7C3D018CD3C4A00E5B1D8 /* stm32_crc.py in Resources */,
+				80A7C3EE18CD3C7D00E5B1D8 /* serialcli.py in Resources */,
+				80A7C3CB18CD3C4A00E5B1D8 /* PblCommand.pyc in Resources */,
+				80A7C3F918CD3C7D00E5B1D8 /* list_ports_windows.py in Resources */,
+				80A7C3F418CD3C7D00E5B1D8 /* __init__.py in Resources */,
+				80A7C3FE18CD3C7D00E5B1D8 /* protocol_rfc2217.py in Resources */,
+				80A7C3D118CD3C4A00E5B1D8 /* stm32_crc.pyc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77C8C1F70C07829500965286 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C8C1F80C07829500965286 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Cocoa_Python_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = PebMessage;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Cocoa_Python_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = PebMessage;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PebMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PebMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

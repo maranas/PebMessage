@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" defaultVersion="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application">
+            <connections>
+                <outlet property="delegate" destination="373" id="374"/>
+            </connections>
+        </customObject>
+        <customObject id="373" userLabel="Cocoa_PythonAppDelegate" customClass="Cocoa_PythonAppDelegate">
+            <connections>
+                <outlet property="about_item" destination="464" id="Bhk-8V-CEa"/>
+                <outlet property="about_view" destination="239-Tf-yeg" id="ku8-7V-6UE"/>
+                <outlet property="connect_button" destination="6oz-cx-2xr" id="lkH-Zu-QUA"/>
+                <outlet property="connect_status" destination="e9Z-c8-AzY" id="x26-CO-F9r"/>
+                <outlet property="main_menu" destination="455" id="462"/>
+                <outlet property="text_field" destination="s89-xL-mZL" id="xv0-wN-lbm"/>
+            </connections>
+        </customObject>
+        <menu id="455">
+            <items>
+                <menuItem title="About" id="464">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="about:" target="373" id="465"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="460"/>
+                <menuItem title="Quit" id="458">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="373" id="459"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="PebMessage" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="239-Tf-yeg" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES" HUD="YES"/>
+            <rect key="contentRect" x="458" y="225" width="450" height="484"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <view key="contentView" id="WgR-MF-oqQ">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="484"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="7mb-cB-c29">
+                        <rect key="frame" x="145" y="431" width="156" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="PebMessage" id="6dN-4b-Lto">
+                            <font key="font" metaFont="systemBold" size="22"/>
+                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="vsS-rd-dCY">
+                        <rect key="frame" x="43" y="13" width="365" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="(c)2014, ganglionsoftware.com" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Mq-py-Bgg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="support:" target="373" id="jIh-l7-MJ0"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="s89-xL-mZL">
+                        <rect key="frame" x="135" y="331" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Mll-n8-hia">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="S12-6Y-HZ9">
+                        <rect key="frame" x="18" y="366" width="412" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Enter your 4-letter Pebble ID and click 'Connect'" id="mTy-DD-UxV">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="6oz-cx-2xr">
+                        <rect key="frame" x="233" y="325" width="92" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ko4-OD-3gU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="pair:" target="373" id="QxI-qZ-rQN"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="gL6-1z-Lht">
+                        <rect key="frame" x="69" y="290" width="104" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Ping" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hY0-a1-GRp">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="testPing:" target="373" id="xem-qA-vzd"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="IC4-hV-BBI">
+                        <rect key="frame" x="173" y="290" width="104" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Test SMS" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LRS-GU-8nO">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="testSMS:" target="373" id="gMC-fO-v6N"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="aqm-ox-Y5w">
+                        <rect key="frame" x="277" y="290" width="104" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Test Email" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3B4-Pl-tNE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="testEmail:" target="373" id="kCd-r6-pdH"/>
+                        </connections>
+                    </button>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="SeE-qA-T0X">
+                        <rect key="frame" x="49" y="61" width="353" height="216"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" id="Sd8-Pl-pRi">
+                            <rect key="frame" x="1" y="1" width="336" height="214"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="yr4-pK-qq3">
+                                    <rect key="frame" x="0.0" y="0.0" width="336" height="1703"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="336" height="214"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <attributedString key="textStorage">
+                                        <fragment>
+                                            <mutableString key="content">This application uses libpebble and pyserial
+
+libpebble license:
+Copyright (C) 2013 Liam McLoughlin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+pyserial:
+
+Copyright (c) 2001-2013 Chris Liechti &lt;cliechti@gmx.net&gt;;
+All Rights Reserved.
+
+This is the Python license. In short, you can use this product in
+commercial and non-commercial applications, modify it, redistribute it.
+A notification to the author when you use and/or modify it is welcome.
+
+
+TERMS AND CONDITIONS FOR ACCESSING OR OTHERWISE USING THIS SOFTWARE
+===================================================================
+
+LICENSE AGREEMENT
+-----------------
+
+1. This LICENSE AGREEMENT is between the copyright holder of this
+product, and the Individual or Organization ("Licensee") accessing
+and otherwise using this product in source or binary form and its
+associated documentation.
+
+2. Subject to the terms and conditions of this License Agreement,
+the copyright holder hereby grants Licensee a nonexclusive,
+royalty-free, world-wide license to reproduce, analyze, test,
+perform and/or display publicly, prepare derivative works, distribute,
+and otherwise use this product alone or in any derivative version,
+provided, however, that copyright holders License Agreement and
+copyright holders notice of copyright are retained in this product
+alone or in any derivative version prepared by Licensee.
+
+3. In the event Licensee prepares a derivative work that is based on
+or incorporates this product or any part thereof, and wants to make
+the derivative work available to others as provided herein, then
+Licensee hereby agrees to include in any such work a brief summary of
+the changes made to this product.
+
+4. The copyright holder is making this product available to Licensee on
+an "AS IS" basis. THE COPYRIGHT HOLDER MAKES NO REPRESENTATIONS OR
+WARRANTIES, EXPRESS OR IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION,
+THE COPYRIGHT HOLDER MAKES NO AND DISCLAIMS ANY REPRESENTATION OR
+WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR
+THAT THE USE OF THIS PRODUCT WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.
+
+5. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER
+USERS OF THIS PRODUCT FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL
+DAMAGES OR LOSS AS A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE
+USING THIS PRODUCT, OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE
+POSSIBILITY THEREOF.
+
+6. This License Agreement will automatically terminate upon a material
+breach of its terms and conditions.
+
+7. Nothing in this License Agreement shall be deemed to create any
+relationship of agency, partnership, or joint venture between the
+copyright holder and Licensee. This License Agreement does not grant
+permission to use trademarks or trade names from the copyright holder
+in a trademark sense to endorse or promote products or services of
+Licensee, or any third party.
+
+8. By copying, installing or otherwise using this product, Licensee
+agrees to be bound by the terms and conditions of this License
+Agreement.
+
+
+</mutableString>
+                                            <attributes>
+                                                <font key="NSFont" metaFont="toolTip"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="336" height="214"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" id="WQq-7M-5Ni">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" id="lRE-Ad-G8Z">
+                            <rect key="frame" x="337" y="1" width="15" height="214"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="e9Z-c8-AzY">
+                        <rect key="frame" x="119" y="400" width="212" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Your Pebble is NOT CONNECTED!" id="9VI-lY-ZOg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>

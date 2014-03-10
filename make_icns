@@ -1,0 +1,23 @@
+#!/bin/bash
+ 
+# Script to convert any image into a .icns file that can be used for Mac App Sore (tm) app submissions
+ 
+if [ $# -eq 0 ]
+  then
+    echo "make_icns <PNG input file>"
+    exit 
+fi
+mkdir "$1.iconset"
+cd "$1.iconset"
+sips --resampleHeightWidth 1024 1024 ../"$1" --out icon_512x512@2x.png
+sips --resampleHeightWidth 512 512 ../"$1" --out icon_512x512.png
+cp icon_512x512.png icon_256x256@2x.png
+sips --resampleHeightWidth 256 256 ../"$1" --out icon_256x256.png
+cp icon_256x256.png icon_128x128@2x.png
+sips --resampleHeightWidth 128 128 ../"$1" --out icon_128x128.png
+sips --resampleHeightWidth 64 64 ../"$1" --out icon_32x32@2x.png
+sips --resampleHeightWidth 32 32 ../"$1" --out icon_32x32.png
+cp icon_32x32.png icon_16x16@2x.png
+sips --resampleHeightWidth 16 16 ../"$1" --out icon_16x16.png
+cd ..
+iconutil -c icns "$1.iconset"
