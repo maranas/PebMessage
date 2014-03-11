@@ -11,12 +11,55 @@ from AppKit import *
 from objc import IBAction, IBOutlet
 from PyObjCTools import AppHelper
 
+import os
+import json
+import socket
 import time
 import threading
+import urllib2
 import webbrowser
 import pebble as libpebble
+from itertools import izip
 
-TIME_SLEEP = 300
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+
+TIME_SLEEP = 10
+DEFAULT_PORT = 3334
+
+SUPPORTED_COMMANDS = ["sms", "email", "ping"]
+
+message_queue = []
+
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print self.path
+        try:
+            head = self.path
+            tail = None
+            args = []
+            (head, tail) = os.path.split(head)
+            while(tail):
+                if tail in SUPPORTED_COMMANDS:
+                    break
+                else:
+                    tail = urllib2.unquote(tail)
+                    args.insert(0, tail)
+                tail = None
+                (head, tail) = os.path.split(head)
+            if tail in SUPPORTED_COMMANDS:
+                i = iter(args)
+                message_data = dict(izip(i, i))
+                message_queue.insert(0, {"type": tail, "data": message_data})
+                self.wfile.write("ok")
+            else:
+                self.wfile.write("not supported")
+            return
+        except IOError:
+            self.send_error(404,'File Not Found: %s' % self.path)
+    
+    
+    def do_POST(self):
+        self.do_GET();
 
 class Cocoa_PythonAppDelegate(NSObject):
     main_menu = IBOutlet()
@@ -51,6 +94,26 @@ class Cocoa_PythonAppDelegate(NSObject):
         if (self.pebble_id):
             self.text_field.setStringValue_(self.pebble_id)
             threading.Thread(target=self.try_pairing).start()
+        # start the server
+        threading.Thread(target=self.startServer).start()
+
+    def startServer(self):
+        pool = NSAutoreleasePool.alloc().init()
+        connected = False
+        while not connected:
+            try:
+                server = HTTPServer(('', DEFAULT_PORT), RequestHandler)
+                host_port = (socket.gethostbyname(socket.gethostname()), DEFAULT_PORT)
+                print 'started httpserver (%s:%s)' % host_port
+                self.about_item.setTitle_('Running on: %s:%s' % host_port)
+                server.serve_forever()
+                connected = True
+            except KeyboardInterrupt:
+                print 'Failed to start server, trying again in 30 seconds...'
+                server.socket.close()
+                time.sleep(30)
+                connected = False
+        del pool
 
     def try_pairing(self):
         pool = NSAutoreleasePool.alloc().init()
@@ -96,7 +159,17 @@ class Cocoa_PythonAppDelegate(NSObject):
         pool = NSAutoreleasePool.alloc().init()
         while self.is_running:
             inner_pool = NSAutoreleasePool.alloc().init()
-            self.cmd_notification_sms(self.pebble, "PebMessage", "A message from your desktop :)")
+            while len(message_queue) > 0:
+                item = message_queue.pop()
+                if (item["type"] == "ping"):
+                    print "Processing ping!"
+                    self.cmd_ping(self.pebble)
+                if (item["type"] == "sms"):
+                    print "Processing sms notification!"
+                    self.cmd_notification_sms(self.pebble, item["data"]["sender"], item["data"]["body"])
+                if (item["type"] == "email"):
+                    print "Processing email notification!"
+                    self.cmd_notification_email(self.pebble, item["data"]["sender"], item["data"]["subject"], item["data"]["body"])
             time.sleep(TIME_SLEEP)
             del inner_pool
         del pool
