@@ -39,6 +39,21 @@ Juse send a request with "sender" as string, "subject" as string and "body" as s
 
     http://192.168.2.100:3334/email/sender/Moises/subject/Test%20Subject/body/Test%20Message
 
+Credits (See the app for the licenses of the third-party libraries used)
+------------------------------------------------------------------------
+libpebble:
+Copyright (C) 2013 Liam McLoughlin
+
+pyserial:
+Copyright (c) 2001-2013 Chris Liechti <cliechti@gmx.net>;
+All Rights Reserved.
+
+Icons:
+Some icons by Yusuke Kamiyamane. http://p.yusukekamiyamane.com/
+
+LICENSE
+-------
+
 Copyright (c) 2014 Moises Anthony Aranas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
