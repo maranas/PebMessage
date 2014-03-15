@@ -19,16 +19,17 @@ import threading
 import urllib2
 import webbrowser
 import pebble as libpebble
+import Queue
 from itertools import izip
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
-TIME_SLEEP = 10
+QUEUE_TIMEOUT = 10
 DEFAULT_PORT = 3334
 
 SUPPORTED_COMMANDS = ["sms", "email", "ping"]
 
-message_queue = []
+message_queue = Queue.Queue()
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -49,7 +50,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             if tail in SUPPORTED_COMMANDS:
                 i = iter(args)
                 message_data = dict(izip(i, i))
-                message_queue.insert(0, {"type": tail, "data": message_data})
+                message_queue.put({"type": tail, "data": message_data})
                 self.wfile.write("ok")
             else:
                 self.wfile.write("not supported")
@@ -159,18 +160,19 @@ class Cocoa_PythonAppDelegate(NSObject):
         pool = NSAutoreleasePool.alloc().init()
         while self.is_running:
             inner_pool = NSAutoreleasePool.alloc().init()
-            while len(message_queue) > 0:
-                item = message_queue.pop()
-                if (item["type"] == "ping"):
-                    print "Processing ping!"
-                    self.cmd_ping(self.pebble)
-                if (item["type"] == "sms"):
-                    print "Processing sms notification!"
-                    self.cmd_notification_sms(self.pebble, item["data"]["sender"], item["data"]["body"])
-                if (item["type"] == "email"):
-                    print "Processing email notification!"
-                    self.cmd_notification_email(self.pebble, item["data"]["sender"], item["data"]["subject"], item["data"]["body"])
-            time.sleep(TIME_SLEEP)
+            try:
+                item = message_queue.get(QUEUE_TIMEOUT)
+            except:
+                continue
+            if (item["type"] == "ping"):
+                print "Processing ping!"
+                self.cmd_ping(self.pebble)
+            if (item["type"] == "sms"):
+                print "Processing sms notification!"
+                self.cmd_notification_sms(self.pebble, item["data"]["sender"], item["data"]["body"])
+            if (item["type"] == "email"):
+                print "Processing email notification!"
+                self.cmd_notification_email(self.pebble, item["data"]["sender"], item["data"]["subject"], item["data"]["body"])
             del inner_pool
         del pool
 
